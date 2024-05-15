@@ -87,17 +87,17 @@ function App() {
       <div className="App-playlist">
         <div className="searchResult">
           <h2>Search Result</h2>
-          <ul>
+          <div className="resultList">
             {searchResult.map((track) => (
-              <li key={track.id}>
+              <div className="item" key={track.id}>
                 <img src={track.album.images[2].url} alt="album cover" />
-                <div>
+                <div >
                   <h3>{track.name}</h3>
                   <p>{track.album.name} | {track.artists[0].name}</p>
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <div className="playlist"></div>
       </div>

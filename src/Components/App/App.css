@@ -1,6 +1,6 @@
 .App {
     height: 100%;
-    padding: 0 17% 10% 17%;
+    padding: 0 10% 10% 10%;
     /* background-image: url(http://localhost:3001/static/media/background_photo_desktop.a0687f3….jpg); */
     background-size: cover;
     background-position: center;
@@ -17,7 +17,29 @@
   justify-content: space-between;
 }
 
-.playlist, .searchResult {
+.searchResult {
+  /* display: flex; */
+  width: 55%;
+  height: 1100px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item div{
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playlist {
   width: 40%;
   height: 1100px;
   background-color: #fff;
