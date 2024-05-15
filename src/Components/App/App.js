@@ -2,9 +2,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import { CLIENT_id, CLIENT_SECRET } from "../../config/apikeys";
 
-const CLIENT_id = "e8ea8eb0dd4a4ba4868e2bcc84c77d5f";
-const CLIENT_SECRET = "2b37c7aa8d8348cdbf6976db4b7043a5";
+
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
@@ -34,7 +34,6 @@ function App() {
 
   async function searchTrack() {
     // console.log(`Search for ${searchInput}`);
-    let id = "";
     const searchParams = {
       method: "GET",
       headers: {
