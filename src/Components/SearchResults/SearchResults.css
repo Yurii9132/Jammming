@@ -1,12 +1,22 @@
 .searchResult h2 {
   text-align: center;
-  margin: 8%;
+  padding: 0.3rem 0;
+  margin: 1.8rem 0.5rem;
+  border-bottom: 3px solid #5468ff;
 }
 
 .searchResult {
   /* display: flex; */
-  width: 55%;
-  height: 1100px;
+  width: 50%;
+  min-height: 1100px;
   background-color: #fff;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
+
+@media only screen and (max-width: 1020px) {
+  .searchResult {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}
+
