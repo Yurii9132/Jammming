@@ -17,27 +17,6 @@
   justify-content: space-between;
 }
 
-.searchResult {
-  /* display: flex; */
-  width: 55%;
-  height: 1100px;
-  background-color: #fff;
-  overflow: scroll;
-}
-
-.item {
-  display: flex;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.item div{
-  display: flex;
-  flex: 2;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 .playlist {
   width: 40%;

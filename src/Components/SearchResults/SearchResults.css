@@ -1,0 +1,12 @@
+.searchResult h2 {
+  text-align: center;
+  margin: 8%;
+}
+
+.searchResult {
+  /* display: flex; */
+  width: 55%;
+  height: 1100px;
+  background-color: #fff;
+  overflow: scroll;
+}

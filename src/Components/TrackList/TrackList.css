@@ -1,0 +1,13 @@
+.track {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.track div{
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
