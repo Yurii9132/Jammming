@@ -1,15 +1,20 @@
-.App {
-    height: 100%;
-    padding: 0 10% 10% 10%;
-    /* background-image: url(http://localhost:3001/static/media/background_photo_desktop.a0687f3….jpg); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    color: #000;
-    background-color: blue;
+.background {
+  /* background-color: rgb(0, 0, 255); */
+  /* background-color: rgb(33, 33, 255); */
+  background-image: linear-gradient(80deg, rgba(0, 0, 255, 1) 0%, rgba(0, 180, 255, 1) 100%);
+  /* box-shadow: 0 0 10px rgba(253, 203, 203, 0.5); */
+}
 
+.App {
+  height: 100%;
+  padding: 0 10% 10% 10%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .header {

@@ -36,10 +36,10 @@ async function savePlaylist(token, trackUris, playlistName) {
   return await addTracksToPlaylist(token, playlistId, trackUris);
 }
 
-async function addTracksToPlaylist(token, playlistId, trachUris) {
+async function addTracksToPlaylist(token, playlistId, trackUris) {
   const addTraksEndpoint = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;
   const payload = {
-    uris: trachUris,
+    uris: trackUris,
     position: 0,
   };
   try {

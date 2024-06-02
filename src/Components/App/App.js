@@ -13,6 +13,7 @@ function App() {
   const [playlistName, setPlaylistName] = useState("New Playlist");
   const [searchResult, setSearchResult] = useState([]);
   const [playlist, setPlaylist] = useState([]);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const args = new URLSearchParams(window.location.search);
   const code = args.get("code");
@@ -28,9 +29,18 @@ function App() {
   };
 
   async function handleSavePlaylist() {
+    if (playlist.length === 0) {
+      return;
+    }
     const trackUris = playlist.map((track) => track.uri);
     currentToken.getAccessToken(code).then((token) => {
       savePlaylist(token, trackUris, playlistName);
+      setPlaylist([]);
+      setPlaylistName("New Playlist");
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 3000);
     });
   }
 
@@ -59,7 +69,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="background">
       <h1 className="header">
         Ja<span className="highlight">mmm</span>ing
       </h1>
@@ -78,10 +88,11 @@ function App() {
             setPlaylistName={setPlaylistName}
             playlist={playlist}
             removeTrack={removeTrack}
-          />
+            showSuccess={showSuccess}
+          />          
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

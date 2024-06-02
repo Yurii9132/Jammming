@@ -2,7 +2,7 @@ import React from "react";
 import "./Playlist.css";
 import Track from "../Track/Track";
 
-function Playlist({ playlist, removeTrack, playlistName, setPlaylistName, onSavePlaylist }) {
+function Playlist({ playlist, removeTrack, playlistName, setPlaylistName, onSavePlaylist, showSuccess }) {
   return (
     <div className="playlist">
       <form onSubmit={(e) => {
@@ -24,6 +24,11 @@ function Playlist({ playlist, removeTrack, playlistName, setPlaylistName, onSave
         />
         ))}
       </div>
+      {showSuccess && (
+        <h2 className="alert alert-success" role="alert">
+          Playlist saved successfully!
+        </h2>
+      )}
     </div>
   );
 }
